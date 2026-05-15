@@ -1,0 +1,285 @@
+{
+  "sidebarTitle": "文档",
+  "breadcrumbDocs": "文档",
+  "fallbackTitle": "文档",
+  "sections": {
+    "gettingStarted": {
+      "title": "快速入门",
+      "items": {
+        "overview": "什么是 SafuSkill？",
+        "connectWallet": "连接钱包",
+        "navigation": "平台导航"
+      }
+    },
+    "marketplace": {
+      "title": "技能市场",
+      "items": {
+        "browseSkills": "浏览和搜索技能",
+        "categories": "分类与筛选",
+        "skillDetail": "技能详情页",
+        "installSkill": "安装技能"
+      }
+    },
+    "security": {
+      "title": "安全扫描",
+      "items": {
+        "howScanningWorks": "扫描工作原理",
+        "riskLevels": "风险等级说明",
+        "scanReport": "阅读扫描报告"
+      }
+    },
+    "publishing": {
+      "title": "发布技能",
+      "items": {
+        "uploadSkill": "上传技能",
+        "skillRequirements": "技能要求",
+        "manageSkills": "管理您的技能"
+      }
+    },
+    "developer": {
+      "title": "开发者指南",
+      "items": {
+        "developerDashboard": "开发者控制台",
+        "analytics": "数据分析与指标",
+        "apiReference": "API 参考"
+      }
+    }
+  },
+  "content": {
+    "overview": {
+      "title": "什么是 SafuSkill？",
+      "p1": "SafuSkill 是一个建立在 BNBChain 上的安全 AI Agent 技能市场。它提供了一个平台，开发者可以在此发布、发现和变现 AI Agent 技能——这些可复用的模块能够扩展 Claude、GPT 等大语言模型 AI 代理的能力。",
+      "keyFeaturesTitle": "核心功能",
+      "featureMarketplace": "技能市场",
+      "featureMarketplaceDesc": "浏览数千个 AI Agent 技能，按热度、安全评分和分类排序。",
+      "featureScanning": "安全扫描",
+      "featureScanningDesc": "每个技能都会由 GoPlus AgentGuard 自动扫描，检测漏洞、恶意代码和数据泄露。",
+      "featureDashboard": "开发者控制台",
+      "featureDashboardDesc": "在一个界面中跟踪您发布的技能、下载量和分析数据。",
+      "whoIsItForTitle": "适合谁使用？",
+      "forUsers": "技能用户",
+      "forUsersDesc": "为您的项目查找和安装经过验证的安全 AI Agent 技能。",
+      "forDevs": "技能开发者",
+      "forDevsDesc": "发布您的技能，建立声誉，扩大受众群体。"
+    },
+    "connectWallet": {
+      "title": "连接钱包",
+      "p1": "要使用开发者功能和发布技能，您需要连接一个 Web3 钱包。",
+      "supportedWalletsTitle": "支持的钱包",
+      "wallet1": "MetaMask",
+      "wallet2": "兼容 WalletConnect 的钱包",
+      "wallet3": "Binance Web3 Wallet",
+      "wallet4": "其他兼容 EVM 的钱包",
+      "stepsTitle": "操作步骤",
+      "step1": "点击导航栏右上角的<strong>\u201c连接钱包\u201d</strong>按钮。",
+      "step2": "从可用选项中选择您偏好的钱包。",
+      "step3": "在您的钱包中批准连接请求。",
+      "step4": "连接成功后，您的钱包地址将显示在导航栏中，带有下拉菜单用于导航和退出。",
+      "noteLabel": "注意：",
+      "noteText": "请确保您的钱包已连接到 <strong>BNB Smart Chain</strong>（Chain ID: 56）主网或 <strong>BNB Testnet</strong>（Chain ID: 97）测试网。"
+    },
+    "navigation": {
+      "title": "平台导航",
+      "p1": "SafuSkill 平台分为几个主要板块，可从导航栏访问：",
+      "navMarketplace": "技能市场",
+      "navMarketplaceDesc": "浏览和搜索 AI Agent 技能。",
+      "navDevelopers": "开发者",
+      "navDevelopersDesc": "访问开发者控制台（需要登录）。",
+      "navDocs": "文档",
+      "navDocsDesc": "您正在这里！平台文档和指南。",
+      "p2": "登录后，点击右上角的钱包地址即可快速访问您的技能和断开连接选项。"
+    },
+    "browseSkills": {
+      "title": "浏览和搜索技能",
+      "p1": "技能市场是发现 AI Agent 技能的中心枢纽。您可以点击导航栏中的<strong>\u201c技能市场\u201d</strong>或访问 <code>/marketplace</code> 进入。",
+      "searchingTitle": "搜索",
+      "searchingDesc": "使用市场右上角的搜索栏按名称搜索技能。结果会随着您的输入实时更新。",
+      "sortingTitle": "排序",
+      "sortingDesc": "使用排序下拉菜单按以下方式排列技能：",
+      "sortStars": "最多 Star",
+      "sortStarsDesc": "GitHub Star 数（默认）",
+      "sortUpdated": "最近更新",
+      "sortUpdatedDesc": "最新活动",
+      "sortRated": "评分最高",
+      "sortRatedDesc": "综合质量评分",
+      "sortDownloads": "下载最多",
+      "sortDownloadsDesc": "下载次数",
+      "paginationTitle": "分页",
+      "paginationDesc": "每页显示 20 个技能。使用右下角的分页控件在页面之间导航。"
+    },
+    "categories": {
+      "title": "分类与筛选",
+      "p1": "技能按分类组织，方便浏览：",
+      "catBNBChain": "BNBChain 技能",
+      "catBNBChainDesc": "专为 BNBChain 生态系统设计的技能（以金色高亮显示）。",
+      "catAll": "全部技能",
+      "catAllDesc": "查看完整目录。",
+      "catDevTools": "开发者工具",
+      "catDevToolsDesc": "IDE 集成、代码生成、代码检查工具。",
+      "catBlockchain": "区块链",
+      "catBlockchainDesc": "DeFi、Web3、代币相关技能。",
+      "catSecurity": "安全",
+      "catSecurityDesc": "审计、漏洞扫描、身份验证工具。",
+      "catData": "数据与分析",
+      "catDataDesc": "数据库、可视化、数据抓取技能。",
+      "catDevOps": "DevOps",
+      "catDevOpsDesc": "CI/CD、Docker、云基础设施工具。",
+      "catProductivity": "生产力",
+      "catProductivityDesc": "自动化、工作流、调度技能。",
+      "catOther": "其他",
+      "catOtherDesc": "不属于其他分类的各种技能。",
+      "p2": "点击任意分类标签以筛选市场视图。默认视图显示 <strong>BNBChain 技能</strong>。"
+    },
+    "skillDetail": {
+      "title": "技能详情页",
+      "p1": "点击任意技能卡片查看其详情页，包括：",
+      "readme": "README",
+      "readmeDesc": "从 GitHub 仓库渲染的技能文档。",
+      "securityScan": "安全扫描",
+      "securityScanDesc": "风险等级徽章和扫描报告摘要。",
+      "metadata": "元数据",
+      "metadataDesc": "Star 数、编程语言、作者信息、最后提交日期。",
+      "sourceLink": "源代码链接",
+      "sourceLinkDesc": "直接链接到 GitHub 仓库。",
+      "download": "下载",
+      "downloadDesc": "一键下载按钮安装技能。"
+    },
+    "installSkill": {
+      "title": "安装技能",
+      "p1": "要安装一个技能用于您的 AI Agent：",
+      "step1": "从市场导航到技能的详情页。",
+      "step2": "查看<strong>安全扫描结果</strong>以确保其安全。",
+      "step3": "点击<strong>\u201c下载\u201d</strong>按钮下载技能包。",
+      "step4": "按照技能的 README 说明将其集成到您的 AI Agent 中。",
+      "warningLabel": "安全警告：",
+      "warningText": "安装技能前请务必检查风险等级。标记为<strong>\u201c风险\u201d</strong>或<strong>\u201c危险\u201d</strong>的技能可能包含有害代码。请谨慎操作。"
+    },
+    "howScanningWorks": {
+      "title": "扫描工作原理",
+      "p1": "SafuSkill 集成了 <strong>GoPlus AgentGuard</strong>，自动扫描每个技能的安全威胁。当技能发布或更新时，AgentGuard 会分析代码中的以下问题：",
+      "threatMalicious": "恶意代码",
+      "threatMaliciousDesc": "后门、挖矿程序、反向 Shell。",
+      "threatCredentials": "凭证泄露",
+      "threatCredentialsDesc": "硬编码的 API 密钥、令牌、密码。",
+      "threatPrompt": "提示词注入",
+      "threatPromptDesc": "试图操纵宿主 AI Agent 的行为。",
+      "threatExfiltration": "数据窃取",
+      "threatExfiltrationDesc": "未经授权的数据收集或传输。",
+      "threatPermission": "权限滥用",
+      "threatPermissionDesc": "请求不必要的文件系统或网络访问权限。",
+      "threatCommands": "危险命令",
+      "threatCommandsDesc": "可能损害系统的 Shell 命令。",
+      "p2": "扫描通常在上传后 30-60 秒内完成。"
+    },
+    "riskLevels": {
+      "title": "风险等级说明",
+      "p1": "每个被扫描的技能会根据发现的严重程度获得一个风险等级：",
+      "safe": "安全",
+      "safeSeverity": "低",
+      "safeDesc": "未检测到重大威胁。可以安全安装。",
+      "caution": "注意",
+      "cautionSeverity": "中",
+      "cautionDesc": "发现轻微问题。安装前请审查。",
+      "risky": "风险",
+      "riskySeverity": "高",
+      "riskyDesc": "检测到重大问题。仅在您信任作者时才安装。",
+      "dangerous": "危险",
+      "dangerousSeverity": "严重",
+      "dangerousDesc": "发现严重威胁。请勿安装。"
+    },
+    "scanReport": {
+      "title": "阅读扫描报告",
+      "p1": "每个技能的扫描报告包括：",
+      "overallRisk": "总体风险等级",
+      "overallRiskDesc": "综合风险评估（安全、注意、风险、危险）。",
+      "findingsList": "发现列表",
+      "findingsListDesc": "扫描期间发现的各项问题，每项都有严重程度和描述。",
+      "safeToUse": "可安全使用",
+      "safeToUseDesc": "基于整体分析的布尔指示器。",
+      "scanDate": "扫描日期",
+      "scanDateDesc": "最近一次扫描的执行时间。",
+      "p2": "您可以在任何技能的详情页中滚动到安全部分查看扫描报告。"
+    },
+    "uploadSkill": {
+      "title": "上传技能",
+      "p1": "要在 SafuSkill 上发布技能：",
+      "step1": "连接您的钱包",
+      "step1Desc": "您必须登录才能发布技能。",
+      "step2": "从市场页面点击<strong>\u201c上传技能\u201d</strong>或导航到 <code>/upload</code>。",
+      "step3": "提供您技能的 <strong>GitHub 仓库 URL</strong>。",
+      "step4": "填写技能元数据——名称、描述、分类。",
+      "step5": "提交技能进行审核和自动安全扫描。",
+      "p2": "提交后，技能将由 AgentGuard 扫描。如果通过，它将出现在市场中。"
+    },
+    "skillRequirements": {
+      "title": "技能要求",
+      "p1": "要在 SafuSkill 上索引技能，应满足以下标准：",
+      "reqPublicRepo": "公开的 GitHub 仓库",
+      "reqPublicRepoDesc": "技能源代码必须可公开访问。",
+      "reqReadme": "README.md",
+      "reqReadmeDesc": "包含说明技能功能和使用方法的文档。",
+      "reqStars": "最低 Star 数",
+      "reqStarsDesc": "要自动发现，仓库至少需要 5 个 GitHub Star。",
+      "reqTopics": "相关主题",
+      "reqTopicsDesc": "添加 GitHub 主题如 <code>mcp-server</code>、<code>agent-skill</code> 或 <code>ai-agent-tool</code> 以提高可发现性。",
+      "recommendedTitle": "推荐结构",
+      "rec1": "清晰的 <code>README.md</code>，包含安装和使用说明。",
+      "rec2": "<code>package.json</code> 或等效的清单文件。",
+      "rec3": "适当的许可证文件。",
+      "rec4": "不包含硬编码的密钥或凭证。"
+    },
+    "manageSkills": {
+      "title": "管理您的技能",
+      "p1": "通过点击导航栏中的<strong>\u201c开发者\u201d</strong>进入<strong>开发者控制台</strong>，或通过个人资料下拉菜单中的<strong>\u201c我的技能\u201d</strong>链接访问您已发布的技能。",
+      "dashboardFeaturesTitle": "控制台功能",
+      "feat1": "查看所有已发布技能及其下载次数。",
+      "feat2": "监控安全扫描状态和风险等级。",
+      "feat3": "查看详细的安全扫描报告。",
+      "feat4": "访问数据分析和性能指标。"
+    },
+    "developerDashboard": {
+      "title": "开发者控制台",
+      "p1": "开发者控制台是您管理技能的控制中心。点击导航栏中的<strong>\u201c开发者\u201d</strong>即可访问。",
+      "dashboardSectionsTitle": "控制台板块",
+      "secOverview": "概览",
+      "secOverviewDesc": "关键指标：总下载量、活跃技能、安全评分。",
+      "secMySkills": "我的技能",
+      "secMySkillsDesc": "您已发布技能的列表，包含下载次数和风险等级。",
+      "secUpload": "上传技能",
+      "secUploadDesc": "快速发布新技能的入口。",
+      "secAnalytics": "数据分析",
+      "secAnalyticsDesc": "技能性能的图表和指标。",
+      "secSettings": "设置",
+      "secSettingsDesc": "账户和个人资料设置。"
+    },
+    "analytics": {
+      "title": "数据分析与指标",
+      "p1": "控制台中的数据分析板块提供以下洞察：",
+      "downloadTrends": "下载趋势",
+      "downloadTrendsDesc": "跟踪您的技能随时间的表现。",
+      "securityOverview": "安全概览",
+      "securityOverviewDesc": "监控您所有技能的安全扫描结果。",
+      "userEngagement": "用户参与度",
+      "userEngagementDesc": "查看谁在使用您的技能。"
+    },
+    "apiReference": {
+      "title": "API 参考",
+      "p1": "SafuSkill 提供公共 API 以供程序化访问：",
+      "endpointsTitle": "接口列表",
+      "endpointSkillsList": "分页列出技能",
+      "endpointSkillsDetail": "获取技能详情",
+      "endpointMostStarred": "按 GitHub Star 排序的技能",
+      "endpointTopRated": "按质量评分排序的技能",
+      "endpointRecentlyUpdated": "最近更新的技能",
+      "endpointTrending": "按 Star 增长速度排序的热门技能",
+      "endpointLandingData": "打包的首页数据",
+      "endpointSubmitSkill": "提交技能进行审核",
+      "endpointStats": "平台统计数据",
+      "queryParamsTitle": "查询参数",
+      "paramLimit": "<code>limit</code> — 结果数量（默认：20，最大：100）",
+      "paramOffset": "<code>offset</code> — 分页偏移量",
+      "paramCategory": "<code>category</code> — 按分类名称筛选",
+      "paramPage": "<code>page</code> — 页码（用于 /skills 接口）"
+    }
+  }
+}

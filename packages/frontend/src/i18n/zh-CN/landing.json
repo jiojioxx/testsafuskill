@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "tag": "由 GoPlus Security 提供安全保障",
+    "title": "AI Agent 技能市场",
+    "subtitle": "在 BNB Chain 上发现、安装和交易经过验证的 AI Agent 技能。安全优先的市场，为开源开发者提供内置经济激励。",
+    "explore": "探索市场",
+    "launch": "发射代币"
+  },
+  "pillars": {
+    "heading": "为什么选择 SafuSkill",
+    "subheading": "一个集发现、安全保障和变现 AI Agent 技能于一体的平台",
+    "marketplace": {
+      "title": "技能市场",
+      "desc": "浏览、发现和安装 AI Agent 技能。按类别、安全评分和热度筛选。每个技能均经 GoPlus AgentGuard 验证。"
+    },
+    "security": {
+      "title": "安全优先",
+      "desc": "每个技能在发布前都会自动扫描恶意代码、数据泄露和安全漏洞。"
+    },
+    "economy": {
+      "title": "技能经济",
+      "desc": "技能代币为 AI 技能创建经济层 - 奖励开发者、吸引社区、推动采用。"
+    }
+  },
+  "howItWorks": {
+    "heading": "运作方式",
+    "steps": {
+      "discover": {
+        "title": "发现技能",
+        "desc": "找到适合您用例的 AI Agent 技能。一键安装经过验证和社区审核的技能。"
+      },
+      "build": {
+        "title": "构建 & 发布",
+        "desc": "开发者创建技能并发布到市场。GoPlus AgentGuard 验证代码安全性。"
+      },
+      "launch": {
+        "title": "发射代币",
+        "desc": "创建技能代币，围绕技能构建社区。在联合曲线上交易，毕业后登陆 PancakeSwap。"
+      },
+      "grow": {
+        "title": "共同成长",
+        "desc": "开发者从交易手续费中获益。用户发现更好的技能。社区推动生态发展。"
+      }
+    }
+  },
+  "tokenomics": {
+    "heading": "技能代币经济学",
+    "subheading": "每个技能代币都遵循相同的透明、公平发射模式",
+    "params": {
+      "heading": "代币参数",
+      "totalSupply": "总供应量",
+      "totalSupplyValue": "10 亿",
+      "currency": "币种",
+      "currencyValue": "BNB",
+      "graduation": "毕业门槛",
+      "graduationValue": "14 BNB",
+      "security": "安全审计",
+      "securityValue": "AgentGuard"
+    },
+    "tax": {
+      "heading": "税费分配",
+      "phase": "阶段",
+      "total": "总计",
+      "developer": "开发者",
+      "platform": "平台",
+      "bondingCurve": "联合曲线",
+      "pancakeSwap": "PancakeSwap",
+      "note": "开发者收入存放在安全金库中。作者验证 GitHub 身份并连接钱包后即可领取收益。"
+    }
+  },
+  "security": {
+    "heading": "由 GoPlus AgentGuard 提供安全保障",
+    "maliciousCode": "恶意代码",
+    "dataLeakage": "数据泄露",
+    "networkRequests": "网络请求",
+    "shelloutAccess": "Shell 访问",
+    "fileSystem": "文件系统"
+  },
+  "cta": {
+    "heading": "准备好开始了吗？",
+    "subheading": "为您的 Agent 找到完美的 AI 技能，发布您自己的技能，或探索 BNB Chain 上的技能经济。",
+    "startBuilding": "开始构建",
+    "launchToken": "发射技能代币",
+    "exploreLaunchpad": "探索发射台"
+  }
+}

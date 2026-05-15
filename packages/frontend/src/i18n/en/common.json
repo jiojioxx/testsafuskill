@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "marketplace": "Marketplace",
+    "launchpad": "Launchpad",
+    "docs": "Docs",
+    "developers": "Developers"
+  },
+  "navbar": {
+    "getStarted": "Get Started",
+    "mySkills": "My Skills",
+    "disconnect": "Disconnect",
+    "incentiveProposals": "Incentive proposals",
+    "copyAddress": "Click to copy address",
+    "connectWallet": "Bind Wallet"
+  },
+  "footer": {
+    "desc": "A secure marketplace for AI Agent Skills on BNBChain. Discover, publish, and monetize AI skills.",
+    "platform": "Platform",
+    "marketplace": "Marketplace",
+    "documentation": "Documentation",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "partners": "Partners",
+    "copyright": "© 2026 GoPlus Security. All rights reserved.",
+    "builtOn": "Built on BNBChain"
+  },
+  "language": {
+    "switchToChinese": "切换到中文",
+    "switchToEnglish": "Switch to English"
+  }
+}

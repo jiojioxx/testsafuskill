@@ -1,0 +1,285 @@
+{
+  "sidebarTitle": "Documentation",
+  "breadcrumbDocs": "Docs",
+  "fallbackTitle": "Documentation",
+  "sections": {
+    "gettingStarted": {
+      "title": "Getting Started",
+      "items": {
+        "overview": "What is SafuSkill?",
+        "connectWallet": "Connect Wallet",
+        "navigation": "Platform Navigation"
+      }
+    },
+    "marketplace": {
+      "title": "Skill Marketplace",
+      "items": {
+        "browseSkills": "Browse & Search Skills",
+        "categories": "Categories & Filters",
+        "skillDetail": "Skill Detail Page",
+        "installSkill": "Install a Skill"
+      }
+    },
+    "security": {
+      "title": "Security Scanning",
+      "items": {
+        "howScanningWorks": "How Scanning Works",
+        "riskLevels": "Risk Levels Explained",
+        "scanReport": "Reading a Scan Report"
+      }
+    },
+    "publishing": {
+      "title": "Publishing Skills",
+      "items": {
+        "uploadSkill": "Upload a Skill",
+        "skillRequirements": "Skill Requirements",
+        "manageSkills": "Manage Your Skills"
+      }
+    },
+    "developer": {
+      "title": "Developer Guide",
+      "items": {
+        "developerDashboard": "Developer Dashboard",
+        "analytics": "Analytics & Metrics",
+        "apiReference": "API Reference"
+      }
+    }
+  },
+  "content": {
+    "overview": {
+      "title": "What is SafuSkill?",
+      "p1": "SafuSkill is a secure marketplace for AI Agent Skills built on BNBChain. It provides a platform where developers can publish, discover, and monetize AI Agent Skills — reusable modules that extend the capabilities of AI agents like Claude, GPT, and other LLMs.",
+      "keyFeaturesTitle": "Key Features",
+      "featureMarketplace": "Skill Marketplace",
+      "featureMarketplaceDesc": "Browse thousands of AI Agent Skills, sorted by popularity, security score, and category.",
+      "featureScanning": "Security Scanning",
+      "featureScanningDesc": "Every skill is automatically scanned by GoPlus AgentGuard for vulnerabilities, malicious code, and data leaks.",
+      "featureDashboard": "Developer Dashboard",
+      "featureDashboardDesc": "Track your published skills, downloads, and analytics in one place.",
+      "whoIsItForTitle": "Who is it for?",
+      "forUsers": "Skill Users",
+      "forUsersDesc": "Find and install verified, secure AI Agent Skills for your projects.",
+      "forDevs": "Skill Developers",
+      "forDevsDesc": "Publish your skills, build a reputation, and grow your audience."
+    },
+    "connectWallet": {
+      "title": "Connect Wallet",
+      "p1": "To access developer features and publish skills, you need to connect a Web3 wallet.",
+      "supportedWalletsTitle": "Supported Wallets",
+      "wallet1": "MetaMask",
+      "wallet2": "WalletConnect-compatible wallets",
+      "wallet3": "Binance Web3 Wallet",
+      "wallet4": "Other EVM-compatible wallets",
+      "stepsTitle": "Steps",
+      "step1": "Click the <strong>\"Connect Wallet\"</strong> button in the top-right corner of the navigation bar.",
+      "step2": "Select your preferred wallet from the available options.",
+      "step3": "Approve the connection request in your wallet.",
+      "step4": "Once connected, your wallet address will appear in the navbar with a dropdown menu for navigation and logout.",
+      "noteLabel": "Note:",
+      "noteText": "Make sure your wallet is connected to the <strong>BNB Smart Chain</strong> (Chain ID: 56) for mainnet or <strong>BNB Testnet</strong> (Chain ID: 97) for testing."
+    },
+    "navigation": {
+      "title": "Platform Navigation",
+      "p1": "The SafuSkill platform is organized into several main sections accessible from the navigation bar:",
+      "navMarketplace": "Marketplace",
+      "navMarketplaceDesc": "Browse and search for AI Agent Skills.",
+      "navDevelopers": "Developers",
+      "navDevelopersDesc": "Access the developer dashboard (requires login).",
+      "navDocs": "Docs",
+      "navDocsDesc": "You are here! Platform documentation and guides.",
+      "p2": "When logged in, click your wallet address in the top-right to access quick links to your skills and the disconnect option."
+    },
+    "browseSkills": {
+      "title": "Browse & Search Skills",
+      "p1": "The Skill Marketplace is the central hub for discovering AI Agent Skills. You can access it by clicking <strong>\"Marketplace\"</strong> in the navbar or visiting <code>/marketplace</code>.",
+      "searchingTitle": "Searching",
+      "searchingDesc": "Use the search bar in the top-right of the marketplace to search skills by name. Results update in real time as you type.",
+      "sortingTitle": "Sorting",
+      "sortingDesc": "Use the sort dropdown to order skills by:",
+      "sortStars": "Most Stars",
+      "sortStarsDesc": "GitHub stars (default)",
+      "sortUpdated": "Recently Updated",
+      "sortUpdatedDesc": "Latest activity",
+      "sortRated": "Top Rated",
+      "sortRatedDesc": "Composite quality score",
+      "sortDownloads": "Most Downloads",
+      "sortDownloadsDesc": "Download count",
+      "paginationTitle": "Pagination",
+      "paginationDesc": "Skills are displayed 20 per page. Use the pagination controls at the bottom-right to navigate between pages."
+    },
+    "categories": {
+      "title": "Categories & Filters",
+      "p1": "Skills are organized into categories for easy browsing:",
+      "catBNBChain": "BNBChain Skills",
+      "catBNBChainDesc": "Skills specifically designed for BNBChain ecosystem (highlighted in gold).",
+      "catAll": "All Skills",
+      "catAllDesc": "View the complete catalog.",
+      "catDevTools": "Developer Tools",
+      "catDevToolsDesc": "IDE integrations, code generation, linting tools.",
+      "catBlockchain": "Blockchain",
+      "catBlockchainDesc": "DeFi, Web3, token-related skills.",
+      "catSecurity": "Security",
+      "catSecurityDesc": "Audit, vulnerability scanning, authentication tools.",
+      "catData": "Data & Analytics",
+      "catDataDesc": "Database, visualization, scraping skills.",
+      "catDevOps": "DevOps",
+      "catDevOpsDesc": "CI/CD, Docker, cloud infrastructure tools.",
+      "catProductivity": "Productivity",
+      "catProductivityDesc": "Automation, workflow, scheduling skills.",
+      "catOther": "Other",
+      "catOtherDesc": "Miscellaneous skills that don't fit other categories.",
+      "p2": "Click any category tab to filter the marketplace view. The default view shows <strong>BNBChain Skills</strong>."
+    },
+    "skillDetail": {
+      "title": "Skill Detail Page",
+      "p1": "Click on any skill card to view its detail page, which includes:",
+      "readme": "README",
+      "readmeDesc": "The skill's documentation rendered from its GitHub repository.",
+      "securityScan": "Security Scan",
+      "securityScanDesc": "Risk level badge and scan report summary.",
+      "metadata": "Metadata",
+      "metadataDesc": "Stars, language, author info, last commit date.",
+      "sourceLink": "Source Link",
+      "sourceLinkDesc": "Direct link to the GitHub repository.",
+      "download": "Download",
+      "downloadDesc": "One-click download button to install the skill."
+    },
+    "installSkill": {
+      "title": "Install a Skill",
+      "p1": "To install a skill for use with your AI Agent:",
+      "step1": "Navigate to the skill's detail page from the marketplace.",
+      "step2": "Review the <strong>security scan results</strong> to ensure it's safe.",
+      "step3": "Click the <strong>\"Download\"</strong> button to download the skill package.",
+      "step4": "Follow the skill's README instructions to integrate it with your AI Agent.",
+      "warningLabel": "Security Warning:",
+      "warningText": "Always check the risk level before installing a skill. Skills marked as <strong>\"Risky\"</strong> or <strong>\"Dangerous\"</strong> may contain harmful code. Proceed with caution."
+    },
+    "howScanningWorks": {
+      "title": "How Scanning Works",
+      "p1": "SafuSkill integrates with <strong>GoPlus AgentGuard</strong> to automatically scan every skill for security threats. When a skill is published or updated, AgentGuard analyzes the code for:",
+      "threatMalicious": "Malicious Code",
+      "threatMaliciousDesc": "Backdoors, cryptominers, reverse shells.",
+      "threatCredentials": "Credential Leaks",
+      "threatCredentialsDesc": "Hardcoded API keys, tokens, passwords.",
+      "threatPrompt": "Prompt Injection",
+      "threatPromptDesc": "Attempts to manipulate the host AI Agent.",
+      "threatExfiltration": "Data Exfiltration",
+      "threatExfiltrationDesc": "Unauthorized data collection or transmission.",
+      "threatPermission": "Permission Abuse",
+      "threatPermissionDesc": "Requesting unnecessary filesystem or network access.",
+      "threatCommands": "Dangerous Commands",
+      "threatCommandsDesc": "Shell commands that could harm the system.",
+      "p2": "Scans typically complete within 30–60 seconds after upload."
+    },
+    "riskLevels": {
+      "title": "Risk Levels Explained",
+      "p1": "Each scanned skill receives a risk level based on the severity of findings:",
+      "safe": "Safe",
+      "safeSeverity": "LOW",
+      "safeDesc": "No significant threats detected. Safe to install.",
+      "caution": "Caution",
+      "cautionSeverity": "MEDIUM",
+      "cautionDesc": "Minor concerns found. Review before installing.",
+      "risky": "Risky",
+      "riskySeverity": "HIGH",
+      "riskyDesc": "Significant issues detected. Install only if you trust the author.",
+      "dangerous": "Dangerous",
+      "dangerousSeverity": "CRITICAL",
+      "dangerousDesc": "Critical threats found. Do not install."
+    },
+    "scanReport": {
+      "title": "Reading a Scan Report",
+      "p1": "Each skill's scan report includes:",
+      "overallRisk": "Overall Risk Level",
+      "overallRiskDesc": "The aggregate risk assessment (Safe, Caution, Risky, Dangerous).",
+      "findingsList": "Findings List",
+      "findingsListDesc": "Individual issues discovered during the scan, each with a severity level and description.",
+      "safeToUse": "Safe to Use",
+      "safeToUseDesc": "A boolean indicator based on the overall analysis.",
+      "scanDate": "Scan Date",
+      "scanDateDesc": "When the most recent scan was performed.",
+      "p2": "You can view the scan report on any skill's detail page by scrolling to the security section."
+    },
+    "uploadSkill": {
+      "title": "Upload a Skill",
+      "p1": "To publish a skill on SafuSkill:",
+      "step1": "Connect your wallet",
+      "step1Desc": "You must be logged in to publish skills.",
+      "step2": "Click <strong>\"Upload Skill\"</strong> from the marketplace page or navigate to <code>/upload</code>.",
+      "step3": "Provide the <strong>GitHub repository URL</strong> for your skill.",
+      "step4": "Fill in the skill metadata — name, description, category.",
+      "step5": "Submit the skill for review and automatic security scanning.",
+      "p2": "Once submitted, the skill will be scanned by AgentGuard. If it passes, it will appear in the marketplace."
+    },
+    "skillRequirements": {
+      "title": "Skill Requirements",
+      "p1": "For a skill to be indexed on SafuSkill, it should meet the following criteria:",
+      "reqPublicRepo": "Public GitHub Repository",
+      "reqPublicRepoDesc": "The skill source code must be publicly accessible.",
+      "reqReadme": "README.md",
+      "reqReadmeDesc": "Include documentation explaining what the skill does and how to use it.",
+      "reqStars": "Minimum Stars",
+      "reqStarsDesc": "For auto-discovery, repos need at least 5 GitHub stars.",
+      "reqTopics": "Relevant Topics",
+      "reqTopicsDesc": "Add GitHub topics like <code>mcp-server</code>, <code>agent-skill</code>, or <code>ai-agent-tool</code> for better discoverability.",
+      "recommendedTitle": "Recommended Structure",
+      "rec1": "A clear <code>README.md</code> with installation and usage instructions.",
+      "rec2": "A <code>package.json</code> or equivalent manifest file.",
+      "rec3": "Proper license file.",
+      "rec4": "No hardcoded secrets or credentials."
+    },
+    "manageSkills": {
+      "title": "Manage Your Skills",
+      "p1": "Access your published skills through the <strong>Developer Dashboard</strong> by clicking <strong>\"Developers\"</strong> in the navbar or via the <strong>\"My Skills\"</strong> link in your profile dropdown.",
+      "dashboardFeaturesTitle": "Dashboard Features",
+      "feat1": "View all your published skills with download counts.",
+      "feat2": "Monitor security scan status and risk levels.",
+      "feat3": "View detailed security scan reports.",
+      "feat4": "Access analytics and performance metrics."
+    },
+    "developerDashboard": {
+      "title": "Developer Dashboard",
+      "p1": "The Developer Dashboard is your control center for managing skills. Access it by clicking <strong>\"Developers\"</strong> in the navbar.",
+      "dashboardSectionsTitle": "Dashboard Sections",
+      "secOverview": "Overview",
+      "secOverviewDesc": "Key metrics: total downloads, active skills, security scores.",
+      "secMySkills": "My Skills",
+      "secMySkillsDesc": "List of your published skills with download counts and risk levels.",
+      "secUpload": "Upload Skill",
+      "secUploadDesc": "Quick access to publish new skills.",
+      "secAnalytics": "Analytics",
+      "secAnalyticsDesc": "Charts and metrics for skill performance.",
+      "secSettings": "Settings",
+      "secSettingsDesc": "Account and profile settings."
+    },
+    "analytics": {
+      "title": "Analytics & Metrics",
+      "p1": "The Analytics section in your dashboard provides insights into:",
+      "downloadTrends": "Download Trends",
+      "downloadTrendsDesc": "Track how your skills are performing over time.",
+      "securityOverview": "Security Overview",
+      "securityOverviewDesc": "Monitor security scan results across your skills.",
+      "userEngagement": "User Engagement",
+      "userEngagementDesc": "See who's using your skills."
+    },
+    "apiReference": {
+      "title": "API Reference",
+      "p1": "SafuSkill provides a public API for programmatic access:",
+      "endpointsTitle": "Endpoints",
+      "endpointSkillsList": "List skills with pagination",
+      "endpointSkillsDetail": "Get skill details",
+      "endpointMostStarred": "Skills sorted by GitHub stars",
+      "endpointTopRated": "Skills sorted by quality score",
+      "endpointRecentlyUpdated": "Recently updated skills",
+      "endpointTrending": "Trending skills by star velocity",
+      "endpointLandingData": "Bundled homepage data",
+      "endpointSubmitSkill": "Submit a skill for review",
+      "endpointStats": "Platform statistics",
+      "queryParamsTitle": "Query Parameters",
+      "paramLimit": "<code>limit</code> — Number of results (default: 20, max: 100)",
+      "paramOffset": "<code>offset</code> — Pagination offset",
+      "paramCategory": "<code>category</code> — Filter by category name",
+      "paramPage": "<code>page</code> — Page number (for /skills endpoint)"
+    }
+  }
+}

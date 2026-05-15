@@ -1,0 +1,131 @@
+{
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 10, 2026",
+    "section1": {
+      "title": "1. Acceptance of Terms",
+      "p1": "By accessing or using the SafuSkill platform, you agree to be bound by these Terms of Service. If you do not agree, do not use the platform."
+    },
+    "section2": {
+      "title": "2. Description of Service",
+      "p1": "SafuSkill provides a marketplace for AI Agent Skills, including skill discovery, security scanning, and publishing on the BNBChain. The platform connects skill developers with users who need AI agent capabilities."
+    },
+    "section3": {
+      "title": "3. User Accounts",
+      "li1": "You connect to SafuSkill using a Web3 wallet. Your wallet address serves as your account identifier.",
+      "li2": "You are responsible for maintaining the security of your wallet and private keys.",
+      "li3": "You must not use the platform for any illegal or unauthorized purpose."
+    },
+    "section4": {
+      "title": "4. Skill Publishing",
+      "li1": "You retain ownership of any skills you publish on SafuSkill.",
+      "li2": "By publishing a skill, you grant SafuSkill a non-exclusive license to display, distribute, and scan your skill on the platform.",
+      "li3": "You represent that you have the right to publish the skill and that it does not infringe on third-party intellectual property.",
+      "li4": "You must not publish skills containing malicious code, malware, or code designed to harm users or systems."
+    },
+    "section5": {
+      "title": "5. Security Scanning",
+      "p1": "All skills are automatically scanned by GoPlus AgentGuard. While we strive for thorough security analysis:",
+      "li1": "Security scans are provided \"as is\" and do not guarantee the absence of all vulnerabilities.",
+      "li2": "Users should exercise their own judgment when installing and using skills, even those marked as \"Safe\".",
+      "li3": "SafuSkill is not liable for damages resulting from the use of any skill, regardless of its scan result."
+    },
+    "section6": {
+      "title": "6. Blockchain Transactions",
+      "p1": "All blockchain transactions are irreversible once confirmed. SafuSkill cannot reverse, cancel, or modify any on-chain transaction. You are responsible for verifying all transaction details before confirming."
+    },
+    "section7": {
+      "title": "7. Prohibited Conduct",
+      "p1": "You agree not to:",
+      "li1": "Upload malicious, harmful, or fraudulent skills.",
+      "li2": "Attempt to exploit vulnerabilities in the platform or other users' skills.",
+      "li3": "Engage in wash trading, pump-and-dump schemes, or other deceptive practices.",
+      "li4": "Use the platform to launder money or finance illegal activities.",
+      "li5": "Interfere with or disrupt the platform's infrastructure.",
+      "li6": "Scrape or harvest data from the platform without permission."
+    },
+    "section8": {
+      "title": "8. Intellectual Property",
+      "p1": "The SafuSkill platform, including its design, logos, and original content, is the property of SafuSkill. Open-source skills retain their original licenses as specified by their authors."
+    },
+    "section9": {
+      "title": "9. Limitation of Liability",
+      "p1": "SafuSkill is provided \"as is\" without warranties of any kind. To the maximum extent permitted by law, SafuSkill shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the platform, including but not limited to:",
+      "li1": "Loss of funds from smart contract interactions.",
+      "li2": "Damages from installing or using skills, even those that passed security scanning.",
+      "li3": "Service interruptions or data loss."
+    },
+    "section10": {
+      "title": "10. Modifications",
+      "p1": "We reserve the right to modify these Terms at any time. Changes will be posted on this page. Continued use of the platform after modifications constitutes acceptance of the updated terms."
+    },
+    "section11": {
+      "title": "11. Governing Law",
+      "p1": "These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles."
+    },
+    "section12": {
+      "title": "12. Contact",
+      "p1": "For questions about these Terms, please reach out via our GitHub repository or community channels."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 10, 2026",
+    "section1": {
+      "title": "1. Introduction",
+      "p1": "SafuSkill (\"we\", \"our\", \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the SafuSkill platform."
+    },
+    "section2": {
+      "title": "2. Information We Collect",
+      "p1": "We may collect the following types of information:",
+      "li1": "<strong>Wallet Address</strong> — Your public blockchain wallet address when you connect to the platform.",
+      "li2": "<strong>Usage Data</strong> — Pages visited, features used, skill downloads, and interaction patterns.",
+      "li3": "<strong>Skill Data</strong> — Information about skills you publish, including source code repository URLs, descriptions, and metadata.",
+      "li4": "<strong>Device Information</strong> — Browser type, operating system, and device identifiers for analytics purposes."
+    },
+    "section3": {
+      "title": "3. How We Use Your Information",
+      "li1": "To provide and maintain the SafuSkill platform and its features.",
+      "li2": "To process skill uploads and security scans.",
+      "li3": "To display your published skills and developer profile on the platform.",
+      "li4": "To improve our services, fix bugs, and develop new features.",
+      "li5": "To communicate important updates about the platform or your account."
+    },
+    "section4": {
+      "title": "4. Blockchain Data",
+      "p1": "When you interact with the BNBChain through SafuSkill, your wallet address and transaction details are recorded on the blockchain and are publicly accessible. We have no control over blockchain data once a transaction is confirmed."
+    },
+    "section5": {
+      "title": "5. Third-Party Services",
+      "p1": "We integrate with the following third-party services:",
+      "li1": "<strong>GoPlus AgentGuard</strong> — For automated security scanning of skills. Skill source code may be shared with GoPlus for analysis.",
+      "li2": "<strong>GitHub</strong> — For skill discovery and repository data. We access publicly available repository information."
+    },
+    "section6": {
+      "title": "6. Data Security",
+      "p1": "We implement appropriate technical and organizational measures to protect your data. However, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security."
+    },
+    "section7": {
+      "title": "7. Data Retention",
+      "p1": "We retain your data for as long as your account is active or as needed to provide our services. You may request deletion of your account data by contacting us."
+    },
+    "section8": {
+      "title": "8. Your Rights",
+      "li1": "Access, update, or delete your personal information.",
+      "li2": "Disconnect your wallet at any time to stop data collection.",
+      "li3": "Request a copy of the data we hold about you."
+    },
+    "section9": {
+      "title": "9. Cookies",
+      "p1": "We use essential cookies and local storage to maintain your session and wallet connection state. We do not use third-party tracking cookies."
+    },
+    "section10": {
+      "title": "10. Changes to This Policy",
+      "p1": "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. Continued use of the platform after changes constitutes acceptance of the updated policy."
+    },
+    "section11": {
+      "title": "11. Contact",
+      "p1": "If you have questions about this Privacy Policy, please reach out via our GitHub repository or community channels."
+    }
+  }
+}

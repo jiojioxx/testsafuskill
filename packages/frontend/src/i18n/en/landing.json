@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "tag": "Powered by GoPlus Security",
+    "title": "The Marketplace for AI Agent Skills",
+    "subtitle": "Discover, install, and trade verified AI Agent Skills on BNB Chain. Security-first marketplace with built-in economic incentives for open-source developers.",
+    "explore": "Explore Marketplace",
+    "launch": "Launch Token"
+  },
+  "pillars": {
+    "heading": "Why SafuSkill",
+    "subheading": "One platform for discovering, securing, and monetizing AI Agent Skills",
+    "marketplace": {
+      "title": "Skill Marketplace",
+      "desc": "Browse, discover, and install AI Agent Skills. Filter by category, security score, and popularity. Every skill is verified by GoPlus AgentGuard."
+    },
+    "security": {
+      "title": "Security First",
+      "desc": "Every skill is automatically scanned for malicious code, data leaks, and vulnerabilities before it reaches users."
+    },
+    "economy": {
+      "title": "Skill Economy",
+      "desc": "Skill Tokens create an economic layer around AI skills — rewarding developers, engaging communities, and driving adoption."
+    }
+  },
+  "howItWorks": {
+    "heading": "How It Works",
+    "steps": {
+      "discover": {
+        "title": "Discover Skills",
+        "desc": "Find AI Agent Skills for your use case. Install verified, community-vetted skills in one click."
+      },
+      "build": {
+        "title": "Build & Publish",
+        "desc": "Developers create skills and publish to the marketplace. GoPlus AgentGuard verifies code safety."
+      },
+      "launch": {
+        "title": "Launch Token",
+        "desc": "Create a Skill Token to build community around a skill. Trade on bonding curve, graduate to PancakeSwap."
+      },
+      "grow": {
+        "title": "Grow Together",
+        "desc": "Developers earn from trading fees. Users discover better skills. Community drives the ecosystem forward."
+      }
+    }
+  },
+  "tokenomics": {
+    "heading": "Skill Token Economics",
+    "subheading": "Every Skill Token follows the same transparent, fair-launch model",
+    "params": {
+      "heading": "Token Parameters",
+      "totalSupply": "Total Supply",
+      "totalSupplyValue": "1 Billion",
+      "currency": "Currency",
+      "currencyValue": "BNB",
+      "graduation": "Graduation",
+      "graduationValue": "14 BNB",
+      "security": "Security",
+      "securityValue": "AgentGuard"
+    },
+    "tax": {
+      "heading": "Tax Distribution",
+      "phase": "Phase",
+      "total": "Total",
+      "developer": "Developer",
+      "platform": "Platform",
+      "bondingCurve": "Bonding Curve",
+      "pancakeSwap": "PancakeSwap",
+      "note": "Developer revenue is held in a secure treasury. Authors can claim earnings after verifying their GitHub identity and connecting a wallet."
+    }
+  },
+  "security": {
+    "heading": "Secured by GoPlus AgentGuard",
+    "maliciousCode": "Malicious Code",
+    "dataLeakage": "Data Leakage",
+    "networkRequests": "Network Requests",
+    "shelloutAccess": "Shellout Access",
+    "fileSystem": "File System"
+  },
+  "cta": {
+    "heading": "Ready to Get Started?",
+    "subheading": "Find the perfect AI skills for your agents, publish your own, or explore the Skill Economy on BNB Chain.",
+    "startBuilding": "Start Building",
+    "launchToken": "Launch Skill Token",
+    "exploreLaunchpad": "Explore Launchpad"
+  }
+}

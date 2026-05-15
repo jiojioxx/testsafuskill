@@ -1,0 +1,29 @@
+{
+  "walletBinding": {
+    "titleRequired": "绑定钱包（必需）",
+    "title": "绑定钱包",
+    "desc": "要完成账户设置，请连接并验证您的钱包。这将使您能够：",
+    "feature1": "为技能发射代币",
+    "feature2": "交易技能代币",
+    "feature3": "领取作者奖励",
+    "feature4": "访问完整的 SafuSkill 生态系统",
+    "connectFirst": "请先连接您的钱包以继续",
+    "connectWallet": "连接钱包",
+    "connectedWallet": "已连接钱包",
+    "disconnect": "断开连接",
+    "binding": "钱包绑定中...",
+    "linkWallet": "绑定钱包",
+    "requiredNote": "这是访问钱包相关功能所必需的。您的钱包将与现有账户绑定。",
+    "connectWalletFirst": "请先连接您的钱包",
+    "bindFailed": "钱包绑定失败",
+    "linkDesc": "将您的钱包绑定到 SafuSkill 账户",
+    "addressAlreadyRegistered": "该钱包地址已被其他账户注册，请使用其他钱包。"
+  },
+  "bondingCurve": {
+    "priceChart": "价格图表",
+    "loading": "加载中...",
+    "noData": "暂无数据",
+    "noCurve": "联合曲线（暂无交易）",
+    "trades": "笔交易 · 折线图"
+  }
+}

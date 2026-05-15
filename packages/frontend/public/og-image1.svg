@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B0E11"/>
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0B90B"/>
+      <stop offset="50%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#F0B90B"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1E2329" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Gold accent line at top -->
+  <rect x="0" y="0" width="1200" height="3" fill="#F0B90B"/>
+  <!-- GoPlus G+ Logo - smaller, more breathing room -->
+  <g transform="translate(524, 80) scale(0.44)" fill="url(#goldGrad)" fill-rule="nonzero">
+    <path d="M205.54,70.01 L126.34,70.01 C77.05,70.01 37.09,110.97 37.09,161.5 C37.09,212.03 77.05,252.99 126.34,252.99 L136.4,252.99 L145.83,252.99 L184.49,252.99 C194.38,252.99 202.4,244.77 202.4,234.63 C202.4,224.48 194.38,216.26 184.49,216.26 L146.46,216.26 L145.83,216.26 L133.26,216.26 C100.64,216.26 74.17,191.9 74.17,161.67 C74.17,131.43 100.64,106.67 133.26,106.67 L173.37,106.8 C173.37,106.77 173.37,106.75 173.37,106.73 L223.13,106.73 C223.13,128.08 204.74,145.4 182.05,145.4 C181.28,145.4 180.57,145.37 179.89,145.34 L179.89,145.39 L127.29,145.39 C118.43,145.39 111.26,152.75 111.26,161.82 C111.26,170.9 118.43,178.25 127.29,178.25 L142.69,178.25 L145.83,178.25 L146.46,178.25 L184.49,178.25 C214.86,178.25 239.49,203.49 239.49,234.63 C239.49,265.76 214.86,291 184.49,291 L145.83,291 L126.34,291 C56.57,291 0,233.02 0,161.5 C0,89.98 56.57,32 126.34,32 L167.83,32 L205.54,32 L242,32 C242,52.78 225.73,69.65 205.54,70 L205.54,70.01 Z M343.24,51.92 L321.02,51.92 L321.02,75.35 C321.02,77.37 319.33,79 317.26,79 L297.19,79 C295.12,79 293.43,77.37 293.43,75.35 L293.43,51.92 L271.76,51.92 C269.68,51.92 268,50.29 268,48.27 L268,30.65 C268,28.64 269.68,27.01 271.76,27.01 L293.43,27.01 L293.43,3.65 C293.43,1.63 295.12,0 297.19,0 L317.26,0 C319.33,0 321.02,1.63 321.02,3.65 L321.02,27.01 L343.24,27.01 C345.32,27.01 347,28.64 347,30.65 L347,48.27 C347,50.29 345.32,51.92 343.24,51.92"/>
+  </g>
+  <!-- Title -->
+  <text x="600" y="340" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="700" fill="#EAECEF" letter-spacing="1">SafuSkill</text>
+  <!-- Divider line -->
+  <line x1="530" y1="368" x2="670" y2="368" stroke="#F0B90B" stroke-width="2" opacity="0.35"/>
+  <!-- Subtitle -->
+  <text x="600" y="410" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="21" fill="#848E9C">The Secure Marketplace for AI Agent Skills</text>
+  <!-- Powered by -->
+  <text x="600" y="560" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#5E6673">Powered by GoPlus Security</text>
+</svg>

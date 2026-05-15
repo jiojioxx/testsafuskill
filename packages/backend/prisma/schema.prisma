@@ -1,0 +1,334 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String        @id @default(uuid()) @db.VarChar(36)
+  username      String        @unique(map: "username") @db.VarChar(255)
+  email         String?       @unique(map: "email") @db.VarChar(255)
+  githubId      String?       @unique(map: "github_id") @map("github_id") @db.VarChar(255)
+  walletAddress String?       @unique(map: "wallet_address") @map("wallet_address") @db.VarChar(255)
+  avatarUrl     String?       @map("avatar_url") @db.Text
+  createdAt     DateTime?     @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt     DateTime?     @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  githubAccessToken String?       @map("github_access_token") @db.Text
+  githubLogin       String?       @map("github_login") @db.VarChar(255)
+  walletRequired    Boolean       @default(false) @map("wallet_required")
+  fourMemeAccessToken String?     @map("four_meme_access_token") @db.Text
+  skills            Skill[]
+  tokenLaunches     TokenLaunch[]
+  authorClaims      AuthorClaim[]
+  comments          Comment[]
+  launchRequests    TokenLaunchRequest[] @relation("requestedLaunches")
+  authorDisputes    AuthorDispute[]
+
+  @@index([email], map: "idx_gh_users_email")
+  @@index([githubId], map: "idx_gh_users_github_id")
+  @@index([walletAddress], map: "idx_gh_users_wallet_address")
+  @@map("gh_users")
+}
+
+model Skill {
+  id            String        @id @default(uuid()) @db.VarChar(36)
+  userId        String        @map("user_id") @db.VarChar(36)
+  name          String        @db.VarChar(255)
+  description   String?       @db.Text
+  filePath      String        @map("file_path") @db.VarChar(500)
+  fileSize      BigInt        @map("file_size")
+  downloadCount Int?          @default(0) @map("download_count")
+  createdAt     DateTime?     @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt     DateTime?     @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  category      String?       @map("category") @db.VarChar(255)
+  sourceRepo    String?       @map("source_repo") @db.VarChar(255)
+  sourcePath    String?       @map("source_path") @db.VarChar(500)
+  stars         Int?          @default(0)
+  language      String?       @db.VarChar(100)
+  topics        String?       @db.Text
+  repoUrl       String?       @map("repo_url") @db.VarChar(500)
+  authorName    String?       @map("author_name") @db.VarChar(255)
+  authorAvatar  String?       @map("author_avatar") @db.VarChar(500)
+  lastCommitAt  DateTime?     @map("last_commit_at") @db.Timestamp(0)
+  score         Float?        @default(0) @db.Float
+  qualityScore  Float?        @default(0) @map("quality_score") @db.Float
+  platforms     String?       @db.Text
+  scanResult    ScanResult?
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "gh_skills_ibfk_1")
+  tokenLaunches TokenLaunch[]
+  authorClaim    AuthorClaim?
+  launchRequests TokenLaunchRequest[]
+  downloadRecords SkillDownloadRecord[]
+  authorDisputes  AuthorDispute[]
+
+  @@unique([sourceRepo, sourcePath], map: "uk_gh_skills_source")
+  @@index([category], map: "idx_gh_skills_category")
+  @@index([createdAt(sort: Desc)], map: "idx_gh_skills_created_at")
+  @@index([downloadCount(sort: Desc)], map: "idx_gh_skills_download_count")
+  @@index([score(sort: Desc)], map: "idx_gh_skills_score")
+  @@index([stars(sort: Desc)], map: "idx_gh_skills_stars")
+  @@index([updatedAt(sort: Desc)], map: "idx_gh_skills_updated_at")
+  @@index([userId], map: "idx_gh_skills_user_id")
+  @@map("gh_skills")
+}
+
+model ScanResult {
+  id          String      @id @default(uuid()) @db.VarChar(36)
+  skillId     String      @unique(map: "skill_id") @map("skill_id") @db.VarChar(36)
+  status      ScanStatus? @default(PENDING)
+  riskLevel   RiskLevel?  @map("risk_level")
+  riskScore   Int?        @map("risk_score")
+  safeToUse   Boolean?    @map("safe_to_use")
+  scanSummary String?     @map("scan_summary") @db.Text
+  scanDetails Json?       @map("scan_details")
+  createdAt   DateTime?   @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt   DateTime?   @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  skill       Skill       @relation(fields: [skillId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "gh_scan_results_ibfk_1")
+
+  @@index([status], map: "idx_gh_scan_results_status")
+  @@map("gh_scan_results")
+}
+
+model TokenLaunch {
+  id           String    @id @default(uuid()) @db.VarChar(36)
+  userId       String    @map("user_id") @db.VarChar(36)
+  skillId      String?   @map("skill_id") @db.VarChar(36)
+  name         String    @db.VarChar(255)
+  symbol       String    @db.VarChar(100)
+  description  String?   @db.Text
+  imageUrl     String?   @map("image_url") @db.VarChar(500)
+  metaCid      String?   @map("meta_cid") @db.VarChar(255)
+  tokenAddress String?   @map("token_address") @db.VarChar(255)
+  txHash       String?   @map("tx_hash") @db.VarChar(255)
+  chainId      Int       @default(56) @map("chain_id")
+  status       String    @default("DRAFT") @db.VarChar(50)
+  taxRate      Int       @default(0) @map("tax_rate")
+  mktBps       Int       @default(10000) @map("mkt_bps")
+  deflationBps Int       @default(0) @map("deflation_bps")
+  dividendBps  Int       @default(0) @map("dividend_bps")
+  lpBps        Int       @default(0) @map("lp_bps")
+  website      String?   @map("website") @db.VarChar(500)
+  twitter      String?   @map("twitter") @db.VarChar(500)
+  launchPlatform  String    @default("FLAP") @map("launch_platform") @db.VarChar(20)
+  deployBlockNumber BigInt? @map("deploy_block_number")
+  createdAt    DateTime? @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt    DateTime? @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  skill        Skill?    @relation(fields: [skillId], references: [id], onUpdate: NoAction, map: "fk_token_launches_skill")
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_token_launches_user")
+  comments     Comment[]
+
+  @@index([skillId], map: "idx_gh_token_launches_skill_id")
+  @@index([status], map: "idx_gh_token_launches_status")
+  @@index([userId], map: "idx_gh_token_launches_user_id")
+  @@map("gh_token_launches")
+}
+
+model SkillSubmission {
+  id          String   @id @default(uuid()) @db.VarChar(36)
+  repoUrl     String   @unique @map("repo_url") @db.VarChar(500)
+  submittedBy String   @map("submitted_by") @db.VarChar(255)
+  status      String   @default("PENDING") @db.VarChar(50)
+  description String?  @db.Text
+  reviewNotes String?  @map("review_notes") @db.Text
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  @@index([repoUrl], map: "idx_gh_skill_submissions_repo_url")
+  @@index([status], map: "idx_gh_skill_submissions_status")
+  @@map("gh_skill_submissions")
+}
+
+model AuthorClaim {
+  id                 String    @id @default(uuid()) @db.VarChar(36)
+  userId             String    @map("user_id") @db.VarChar(36)
+  skillId            String    @unique(map: "uk_author_claims_skill") @map("skill_id") @db.VarChar(36)
+  status             String    @default("VERIFIED") @db.VarChar(50)
+  githubUsername     String    @map("github_username") @db.VarChar(255)
+  sourceRepo         String    @map("source_repo") @db.VarChar(255)
+  verifiedAt         DateTime? @map("verified_at") @db.Timestamp(0)
+  beneficiaryAddress String?   @map("beneficiary_address") @db.VarChar(255)
+  createdAt          DateTime  @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt          DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  user               User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_author_claims_user")
+  skill              Skill     @relation(fields: [skillId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_author_claims_skill")
+  revenueClaims      RevenueClaim[]
+
+  @@index([userId], map: "idx_author_claims_user_id")
+  @@map("gh_author_claims")
+}
+
+model Comment {
+  id             String    @id @default(uuid()) @db.VarChar(36)
+  userId         String    @map("user_id") @db.VarChar(36)
+  tokenLaunchId  String    @map("token_launch_id") @db.VarChar(36)
+  content        String    @db.Text
+  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamp(0)
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_comments_user")
+  tokenLaunch    TokenLaunch @relation(fields: [tokenLaunchId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_comments_token")
+
+  @@index([tokenLaunchId, createdAt(sort: Desc)], map: "idx_comments_token_created")
+  @@index([userId], map: "idx_comments_user_id")
+  @@map("gh_comments")
+}
+
+model TokenLaunchRequest {
+  id          String    @id @default(uuid()) @db.VarChar(36)
+  requesterId String    @map("requester_id") @db.VarChar(36)
+  skillId     String    @map("skill_id") @db.VarChar(36)
+  status      String    @default("PENDING") @db.VarChar(50)
+  message     String?   @db.Text
+  reviewNote  String?   @map("review_note") @db.Text
+  reviewedBy  String?   @map("reviewed_by") @db.VarChar(36)
+  reviewedAt  DateTime? @map("reviewed_at") @db.Timestamp(0)
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt   DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  requester   User      @relation("requestedLaunches", fields: [requesterId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_launch_requests_user")
+  skill       Skill     @relation(fields: [skillId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_launch_requests_skill")
+
+  @@unique([requesterId, skillId], map: "uk_launch_requests_user_skill")
+  @@index([skillId], map: "idx_launch_requests_skill")
+  @@index([status], map: "idx_launch_requests_status")
+  @@map("gh_token_launch_requests")
+}
+
+model SkillDownloadRecord {
+  id            String    @id @default(uuid()) @db.VarChar(36)
+  skillId       String    @map("skill_id") @db.VarChar(36)
+  userId        String?   @map("user_id") @db.VarChar(36)
+  walletAddress String?   @map("wallet_address") @db.VarChar(255)
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt     DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+  skill         Skill     @relation(fields: [skillId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_skill_download_records_skill")
+
+  @@index([skillId], map: "idx_skill_download_records_skill_id")
+  @@index([userId], map: "idx_skill_download_records_user_id")
+  @@index([walletAddress], map: "idx_skill_download_records_wallet")
+  @@map("gh_skill_download_records")
+}
+
+model FeaturedSkill {
+  id         String   @id @default(uuid()) @db.VarChar(36)
+  sourceRepo String   @map("source_repo") @db.VarChar(255)
+  sourcePath String   @map("source_path") @db.VarChar(500)
+  sortOrder  Int      @default(0) @map("sort_order")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+
+  @@unique([sourceRepo, sourcePath], map: "uk_gh_featured_skills_repo_path")
+  @@index([sortOrder], map: "idx_gh_featured_skills_sort")
+  @@map("gh_featured_skills")
+}
+
+/// Global indexer state — one row per chain
+model ChainIndexerState {
+  chainId          Int    @id @map("chain_id")
+  lastIndexedBlock BigInt @default(0) @map("last_indexed_block")
+
+  @@map("gh_chain_indexer_state")
+}
+
+/// Token registered on-chain (from TokenCreated event)
+model OnChainToken {
+  tokenAddress String  @id @map("token_address") @db.VarChar(42)
+  chainId      Int     @map("chain_id")
+  creator      String  @map("creator") @db.VarChar(42)
+  name         String  @db.VarChar(255)
+  symbol       String  @db.VarChar(100)
+  meta         String? @db.VarChar(500)
+  /// bonding curve params (from TokenCurveSetV2 or decoded)
+  rRaw         String? @map("r_raw") @db.VarChar(78)
+  hRaw         String? @map("h_raw") @db.VarChar(78)
+  kRaw         String? @map("k_raw") @db.VarChar(78)
+  createdBlock BigInt  @map("created_block")
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+
+  trades TokenTrade[]
+
+  @@index([chainId], map: "idx_on_chain_tokens_chain_id")
+  @@map("gh_on_chain_tokens")
+}
+
+/// One row per trade event (buy or sell)
+model TokenTrade {
+  id           BigInt  @id @default(autoincrement())
+  tokenAddress String  @map("token_address") @db.VarChar(42)
+  chainId      Int     @map("chain_id")
+  blockNumber  BigInt  @map("block_number")
+  txHash       String  @map("tx_hash") @db.VarChar(66)
+  isBuy        Boolean @map("is_buy")
+  /// token amount (in whole tokens, stored as string for precision)
+  tokenAmount  String  @map("token_amount") @db.VarChar(78)
+  /// BNB amount (in whole BNB, stored as string for precision)
+  bnbAmount    String  @map("bnb_amount") @db.VarChar(78)
+  /// post-trade price in BNB per token (stored as string for precision)
+  priceRaw     String  @map("price_raw") @db.VarChar(78)
+  /// circulating supply after trade (from FlapTokenCirculatingSupplyChanged)
+  supplyRaw    String  @map("supply_raw") @db.VarChar(78)
+  /// block-estimated timestamp (seconds since epoch, block * 3s estimate)
+  blockTs      BigInt  @map("block_ts")
+
+  token OnChainToken @relation(fields: [tokenAddress], references: [tokenAddress], onDelete: Cascade)
+
+  @@unique([txHash, isBuy], map: "uk_token_trades_tx_side")
+  @@index([tokenAddress, blockTs(sort: Desc)], map: "idx_token_trades_addr_ts")
+  @@index([blockNumber], map: "idx_token_trades_block")
+  @@map("gh_token_trades")
+}
+
+model RevenueClaim {
+  id              String      @id @default(uuid()) @db.VarChar(36)
+  authorClaimId   String      @map("author_claim_id") @db.VarChar(36)
+  tokenAddress    String      @map("token_address") @db.VarChar(42)
+  claimedAmount   String      @map("claimed_amount") @db.VarChar(78)
+  lastTradeId     BigInt      @map("last_trade_id")
+  tradeCount      Int         @default(0) @map("trade_count")
+  txHash          String?     @map("tx_hash") @db.VarChar(66)
+  status          String      @default("PENDING") @db.VarChar(20)
+  createdAt       DateTime    @default(now()) @map("created_at") @db.Timestamp(0)
+
+  authorClaim     AuthorClaim @relation(fields: [authorClaimId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_revenue_claims_author")
+
+  @@index([authorClaimId], map: "idx_revenue_claims_author")
+  @@index([tokenAddress], map: "idx_revenue_claims_token")
+  @@index([status], map: "idx_revenue_claims_status")
+  @@map("gh_revenue_claims")
+}
+
+model AuthorDispute {
+  id              String   @id @default(uuid()) @db.VarChar(36)
+  userId          String   @map("user_id") @db.VarChar(36)
+  skillId         String?  @map("skill_id") @db.VarChar(36)
+  skillName       String   @map("skill_name") @db.VarChar(255)
+  tokenAddress    String?  @map("token_address") @db.VarChar(255)
+  reason          String   @db.Text
+  proofUrls       String?  @map("proof_urls") @db.Text
+  status          String   @default("PENDING") @db.VarChar(50)
+  reviewNote      String?  @map("review_note") @db.Text
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+  updatedAt       DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp(0)
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_author_disputes_user")
+  skill           Skill?   @relation(fields: [skillId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "fk_author_disputes_skill")
+
+  @@index([userId], map: "idx_author_disputes_user")
+  @@index([skillId], map: "idx_author_disputes_skill")
+  @@index([status], map: "idx_author_disputes_status")
+  @@map("gh_author_disputes")
+}
+
+enum ScanStatus {
+  PENDING
+  SCANNING
+  COMPLETED
+  FAILED
+}
+
+enum RiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}

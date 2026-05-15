@@ -1,0 +1,29 @@
+{
+  "walletBinding": {
+    "titleRequired": "Link Your Wallet (Required)",
+    "title": "Link Your Wallet",
+    "desc": "To complete your account setup, please connect and verify your wallet. This enables you to:",
+    "feature1": "Launch tokens for skills",
+    "feature2": "Trade skill tokens",
+    "feature3": "Claim author rewards",
+    "feature4": "Access the full SafuSkill ecosystem",
+    "connectFirst": "Please connect your wallet first to continue",
+    "connectWallet": "Connect Wallet",
+    "connectedWallet": "Connected Wallet",
+    "disconnect": "Disconnect",
+    "binding": "Binding Wallet...",
+    "linkWallet": "Link Wallet",
+    "requiredNote": "This is required to access wallet-dependent features. Your wallet will be linked to your existing account.",
+    "connectWalletFirst": "Please connect your wallet first",
+    "bindFailed": "Failed to bind wallet",
+    "linkDesc": "Link your wallet to your SafuSkill account",
+    "addressAlreadyRegistered": "This wallet address is already registered to another account. Please use a different wallet."
+  },
+  "bondingCurve": {
+    "priceChart": "Price Chart",
+    "loading": "Loading...",
+    "noData": "No data yet",
+    "noCurve": "Bonding curve (no trades yet)",
+    "trades": "trades · line chart"
+  }
+}

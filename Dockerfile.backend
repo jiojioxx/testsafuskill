@@ -1,0 +1,19 @@
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+COPY packages/backend/package*.json ./packages/backend/
+RUN npm install --workspace=packages/backend
+COPY packages/backend ./packages/backend
+RUN npm run build -w packages/backend
+
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+COPY packages/backend/package*.json ./packages/backend/
+COPY --from=builder /app/node_modules ./node_modules
+RUN npm prune --omit=dev --workspace=packages/backend
+COPY --from=builder /app/packages/backend/dist ./packages/backend/dist
+COPY packages/backend/prisma ./packages/backend/prisma
+RUN npx prisma generate --schema=./packages/backend/prisma/schema.prisma
+EXPOSE 3000
+CMD ["node", "packages/backend/dist/main"]

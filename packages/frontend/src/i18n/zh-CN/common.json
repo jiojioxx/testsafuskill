@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "marketplace": "技能市场",
+    "launchpad": "发射台",
+    "docs": "文档",
+    "developers": "开发者"
+  },
+  "navbar": {
+    "getStarted": "开始使用",
+    "mySkills": "我的技能",
+    "disconnect": "断开连接",
+    "incentiveProposals": "激励提案",
+    "copyAddress": "点击复制地址",
+    "connectWallet": "绑定钱包"
+  },
+  "footer": {
+    "desc": "BNBChain 上安全的 AI Agent 技能市场。发现、发布和变现 AI 技能。",
+    "platform": "平台",
+    "marketplace": "技能市场",
+    "documentation": "文档中心",
+    "legal": "法律条款",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "partners": "合作伙伴",
+    "copyright": "© 2026 GoPlus Security. 保留所有权利。",
+    "builtOn": "构建于 BNBChain"
+  },
+  "language": {
+    "switchToChinese": "切换到中文",
+    "switchToEnglish": "Switch to English"
+  }
+}

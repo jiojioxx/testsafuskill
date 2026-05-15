@@ -1,0 +1,33 @@
+{
+  "name": "SafuSkill — The Secure Marketplace for AI Agent Skills",
+  "short_name": "SafuSkill",
+  "description": "Discover, publish, and trade AI Agent Skills with built-in GoPlus security scanning. Launch Skill Tokens on BNBChain.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0E11",
+  "theme_color": "#0B0E11",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
